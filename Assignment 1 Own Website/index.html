@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EduTrack Analytics</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>EduTrack Analytics</h1>
+    <div class="header-actions">
+      <button>Admin</button>
+      <button>Switch to Teacher View</button>
+    </div>
+  </header>
+
+  <nav>
+    <button class="active">Admin Dashboard</button>
+    <button>Teacher Attendance</button>
+  </nav>
+
+  <section class="stats">
+    <div class="card">
+      <h3>Overall Attendance</h3>
+      <p class="big">92.7% <span class="trend up">+1.2%</span></p>
+      <small>Compared to last month</small>
+    </div>
+    <div class="card">
+      <h3>Absent Students</h3>
+      <p class="big">24 <span class="trend down">+3</span></p>
+      <small>Today's count</small>
+    </div>
+    <div class="card">
+      <h3>Classes Tracked</h3>
+      <p class="big">18 <span>100%</span></p>
+      <small>All classes reported</small>
+    </div>
+  </section>
+
+  <section class="charts">
+    <canvas id="weeklyTrend"></canvas>
+    <canvas id="gradeChart"></canvas>
+  </section>
+
+  <section class="table-section">
+    <h3>Class Attendance Breakdown</h3>
+    <label>
+      Filter by:
+      <select>
+        <option>Today</option>
+        <option>Yesterday</option>
+      </select>
+    </label>
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Students</th>
+          <th>Present</th>
+          <th>Absent</th>
+          <th>Attendance %</th>
+          <th>Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Grade 9A</td>
+          <td>32</td>
+          <td>30</td>
+          <td>2</td>
+          <td>93.8%</td>
+          <td class="up">↑ 2.1%</td>
+        </tr>
+        <tr>
+          <td>Grade 10B</td>
+          <td>28</td>
+          <td>25</td>
+          <td>3</td>
+          <td>89.3%</td>
+          <td class="down">↓ 1.7%</td>
+        </tr>
+        <tr>
+          <td>Grade 11C</td>
+          <td>30</td>
+          <td>29</td>
+          <td>1</td>
+          <td>96.7%</td>
+          <td class="up">↑ 3.4%</td>
+        </tr>
+        <tr>
+          <td>Grade 12A</td>
+          <td>26</td>
+          <td>24</td>
+          <td>2</td>
+          <td>92.3%</td>
+          <td class="up">↑ 0.8%</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
